@@ -23,7 +23,24 @@ Now you can visit [`localhost:4000`](http://localhost:4000) from your browser.
 
 ### Running Commands
 
-Use `docker-compose run` to execute Mix commands:
+The project includes a justfile for convenient command shortcuts:
+
+```bash
+# Main commands
+just mix deps.get        # Install dependencies
+just mix ecto.create     # Create database
+just mix ecto.migrate    # Run migrations
+just mix phx.server      # Start Phoenix server
+just test               # Run tests
+just test path/to/file   # Run specific test file
+
+# Container management
+just up                 # Start application and database
+just upd                # Start in background
+just down               # Stop application and database
+```
+
+You can also use `docker-compose run` directly:
 
 ```bash
 # Install dependencies
