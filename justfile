@@ -5,8 +5,8 @@ mix *args:
     docker-compose run --rm app mix {{args}}
 
 # Run tests
-test:
-    docker-compose run --rm -e MIX_ENV=test app mix test
+test *args:
+    docker-compose run --rm -e MIX_ENV=test app mix test {{args}}
 
 # Start the application
 up:

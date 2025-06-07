@@ -6,8 +6,8 @@ services:
     volumes:
       - .:/app
       - /app/deps
-      - /app/_build
       - /app/assets/node_modules
+      - build_cache:/app/_build
     environment:
       - MIX_ENV=dev
       - DB_HOST=db
@@ -31,3 +31,4 @@ services:
 
 volumes:
   postgres_data:
+  build_cache:
