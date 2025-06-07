@@ -1,0 +1,10 @@
+/_build
+/deps
+/assets/node_modules
+/.git
+/.gitignore
+/README.md
+/test
+/.elixir_ls
+/.vscode
+.DS_Store
