@@ -17,6 +17,7 @@ defmodule LocalDockerWeb.Router do
   scope "/", LocalDockerWeb do
     pipe_through :browser
 
+    resources "/products", ProductController
     get "/", PageController, :home
   end
 
